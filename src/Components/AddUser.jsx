@@ -32,16 +32,15 @@ function AddUser(){
     const handleSubmit=async ()=>{
 
         const res=await adduser(user);
-        if(res.statusText==='Created')
-        {
-            alert('User Added');
-            setUser(initialValue);
-            history('/all')
-        }
-        else
-        {
-            alert('Invalid Data');
-        }
+        // if(res.statusText==='Created')
+        // {
+        //     alert('User Added');
+        //     history('/all')
+        // }
+        // else
+        // {
+        //     alert('Invalid Data');
+        // }
     }
     return(
         <>

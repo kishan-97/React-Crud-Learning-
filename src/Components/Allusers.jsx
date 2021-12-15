@@ -1,7 +1,6 @@
-import { getusers } from "../Service/api";
 import {useEffect,useState} from 'react';
 import Table from './Table';
-import { deleteUser } from '../Service/api';
+import {getusers, deleteUser } from '../Service/api';
 
 function Allusers()
 {
@@ -10,13 +9,12 @@ function Allusers()
     const getAllusers=async()=>{
         const response= await getusers();
         setusers(response.data);
-        console.log(response);
     }
 
     const handleDelete=async (id)=>{
         const res=await deleteUser(id);
         getAllusers();
-      }
+    }
     
     useEffect(()=>{
         getAllusers();

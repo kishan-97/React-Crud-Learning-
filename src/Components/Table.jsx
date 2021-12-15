@@ -8,12 +8,9 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import {Button} from '@material-ui/core';
 import {Link} from 'react-router-dom';
-import {useEffect} from 'react';
 
 export default function BasicTable(props) {
     const {users,handleDelete}=props; 
-    
-    console.log(users);
     return (
     <TableContainer component={Paper}>
       <Table >
@@ -28,7 +25,7 @@ export default function BasicTable(props) {
         <TableBody>
           {users.map((row) => (
             <TableRow
-              key={row.id}
+              key={row._id}
               
             >
               <TableCell >
@@ -38,9 +35,9 @@ export default function BasicTable(props) {
               <TableCell align="right">{row.phone}</TableCell>
               <TableCell align="right">{row.email}</TableCell>
               <TableCell>
-                <Button variant="contained" color="primary" component={Link} to={`/edit/${row.id}`}>Edit</Button>
+                <Button variant="contained" color="primary" component={Link} to={`/edit/${row._id}`}>Edit</Button>
                 &nbsp;
-                <Button variant="contained" color="secondary" onClick={()=>handleDelete(row.id)} >Delete</Button>
+                <Button variant="contained" color="secondary" onClick={()=>handleDelete(row._id)} >Delete</Button>
               </TableCell>
             </TableRow>
           ))}

@@ -6,6 +6,20 @@
       "phone": "123456",
       "email": "ani@gmail.com",
       "id": 3
+    },
+    {
+      "name": "Animesh",
+      "username": "armoured_titan",
+      "phone": "8303724424",
+      "email": "ani@gmail.com",
+      "id": 4
+    },
+    {
+      "name": "Rajat",
+      "username": "darkstar@18",
+      "phone": "8303724424",
+      "email": "rj@gmail.com",
+      "id": 5
     }
   ]
 }
